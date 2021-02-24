@@ -1,21 +1,15 @@
 class Solution {
     public boolean checkPossibility(int[] nums) {
-        if (nums==null) return false;
-        if (nums.length<=2) return true;
-        int low=0;
-        
-        for (int i=1; i<nums.length; i++) {
-            if (nums[i-1]>nums[i]) {
-                low+=1;
-                if(i-2 >= 0 && i+1 < nums.length) {
-                    if(nums[i-2] > nums[i] && nums[i-1] > nums[i+1]){
-                        return false;   
-                    }
+        int count = 0;
+        for (int i=0; i<nums.length-1; i++) {
+            if (!(nums[i]<=nums[i+1])) {
+                if (count>0) return false;
+                if (i-1>=0&&i+2<nums.length && (nums[i]>nums[i+2]&&nums[i+1]<nums[i-1])) {
+                    return false;
                 }
-                
-            }
+                count++;
+            }  
         }
-        if (low>1) return false;
         return true;
     }
 }
