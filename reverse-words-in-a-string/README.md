@@ -1,3 +1,4 @@
+[Discussion Post (created on 2/2/2021 at 23:32)](https://leetcode.com/problems/reverse-words-in-a-string/discuss/1090875/Using-a-separate-function-Java)  
 <h2>151. Reverse Words in a String</h2><h3>Medium</h3><hr><div><p>Given an input string <code>s</code>, reverse the order of the <strong>words</strong>.</p>
 
 <p>A <strong>word</strong> is defined as a sequence of non-space characters. The <strong>words</strong> in <code>s</code> will be separated by at least one space.</p>
