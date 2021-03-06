@@ -1,3 +1,4 @@
+[Discussion Post (created on 6/2/2021 at 0:7)](https://leetcode.com/problems/validate-ip-address/submissions/)  
 <h2>468. Validate IP Address</h2><h3>Medium</h3><hr><div><p>Given a string <code>IP</code>, return <code>"IPv4"</code> if IP is a valid IPv4 address,&nbsp;<code>"IPv6"</code> if&nbsp;IP is a valid IPv6 address or <code>"Neither"</code> if IP is not a correct IP of any type.</p>
 
 <p><strong>A valid IPv4</strong> address&nbsp;is an IP in the form <code>"x<sub>1</sub>.x<sub>2</sub>.x<sub>3</sub>.x<sub>4</sub>"</code> where <code>0 &lt;=&nbsp;x<sub><span style="font-size: 10.8333px;">i</span></sub>&nbsp;&lt;= 255</code> and <code>x<sub>i</sub></code> <strong>cannot contain</strong> leading zeros. For example, <code>"192.168.1.1"</code> and&nbsp;<code>"192.168.1.0"</code> are valid IPv4 addresses but <code>"192.168.01.1"</code>, while <code>"192.168.1.00"</code>&nbsp;and <code>"192.168@1.1"</code> are invalid IPv4 addresses.</p>
