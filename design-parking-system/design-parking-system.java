@@ -1,28 +1,11 @@
 class ParkingSystem {
-    int big;
-    int medium;
-    int small;
-
+    int[] count;
     public ParkingSystem(int big, int medium, int small) {
-        this.big = big;
-        this.medium = medium;
-        this.small = small;
+        count = new int[] {big, medium, small};
     }
     
     public boolean addCar(int carType) {
-        switch (carType) {
-            case 1:
-                big = big - 1;
-                return (big>=0);
-            case 2:
-                medium = medium - 1;
-                return (medium>=0);
-            case 3:
-                small = small - 1;
-                return (small>=0);
-            default:
-                return false;
-        }
+        return count[carType-1]--> 0;
     }
 }
 
