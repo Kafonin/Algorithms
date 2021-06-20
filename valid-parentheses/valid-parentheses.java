@@ -1,25 +1,31 @@
 class Solution {
-    private HashMap<Character, Character> map;
-    
-    public Solution() {
-        this.map = new HashMap<Character, Character>();
-        this.map.put(')', '(');
-        this.map.put(']', '[');
-        this.map.put('}', '{');
-    }
     public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         
-        for (int i=0; i<s.length(); i++) {
-            char c = s.charAt(i);
-            if (this.map.containsKey(c)) {
-                char topElement = stack.empty() ? '#' : stack.pop();
-                if (topElement!=this.map.get(c)) {
+        for (char c : s.toCharArray()) {
+            if (c=='(' || c=='[' || c=='{') {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty()) {
                     return false;
                 }
-            } else {
-                stack.push(c);
+                if (c==')') {
+                    if ('(' != stack.pop()) {
+                        return false;
+                    }
+                }
+                else if (c==']') {
+                    if ('[' != stack.pop()) {
+                        return false;
+                    }
+                }
+                else if (c=='}') {
+                    if ('{' != stack.pop()) {
+                        return false;
+                    }
+                }
             }
+            
         }
         return stack.isEmpty();
     }
