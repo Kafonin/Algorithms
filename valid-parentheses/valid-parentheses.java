@@ -9,13 +9,13 @@ class Solution {
                 if (stack.isEmpty()) {
                     return false;
                 }
-                if (s.charAt(i) == ')'&& stack.pop() != '(') {
+                else if (s.charAt(i)==')' && stack.pop()!='(') {
                     return false;
                 }
-                else if (s.charAt(i) == '}'&& stack.pop() != '{') {
+                else if (s.charAt(i)==']' && stack.pop()!='[') {
                     return false;
                 }
-                else if (s.charAt(i) == ']'&& stack.pop() != '[') {
+                else if (s.charAt(i)=='}' && stack.pop()!='{') {
                     return false;
                 }
             }
