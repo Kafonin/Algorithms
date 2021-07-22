@@ -6,6 +6,7 @@ class Solution {
             mnm = Math.min(mnm, stock);
             mxm = Math.max(mxm, stock-mnm);
         }
+        
         return mxm;
     }
 }
