@@ -5,12 +5,11 @@ class Solution {
         int sum = 0;
         
         for (int i = 0; i < nums.length; i++) {
-            sum = sum + nums[i];
-            mx  = Math.max(mx, sum);
-            
             if (sum < 0) {
                 sum = 0;
             }
+            sum = sum + nums[i];
+            mx  = Math.max(mx, sum);       
         }
         
         return mx;
