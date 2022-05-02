@@ -8,7 +8,7 @@ class Solution {
             if (sum < 0) {
                 sum = 0;
             }
-            sum = sum + nums[i];
+            sum += nums[i];
             mx  = Math.max(mx, sum);       
         }
         
