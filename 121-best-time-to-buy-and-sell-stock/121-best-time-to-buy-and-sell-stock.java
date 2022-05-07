@@ -1,11 +1,20 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        int mnm = prices[0], mxm = 0;
+        int least_selling_price     = Integer.MAX_VALUE;
+        int overall_profit          = 0;
+        int profit_if_sold_that_day = 0;
         
         for (int i = 0; i < prices.length; i++) {
-            mnm = Math.min(mnm, prices[i]);
-            mxm = Math.max(mxm, prices[i] - mnm);
+            if (prices[i] < least_selling_price) {
+                least_selling_price = prices[i];
+            }
+            
+            profit_if_sold_that_day = prices[i] - least_selling_price;
+            
+            if (overall_profit < profit_if_sold_that_day) {
+                overall_profit = profit_if_sold_that_day;
+            }
         }
-        return mxm;
+        return overall_profit;
     }
 }
