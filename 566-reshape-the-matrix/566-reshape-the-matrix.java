@@ -1,13 +1,15 @@
 class Solution {
     public int[][] matrixReshape(int[][] mat, int r, int c) {
-        int mat_row             = mat.length;
-        int mat_col             = mat[0].length;
+        if((mat.length * mat[0].length) != (r * c)) return mat;
+
         int[][] reshaped_matrix = new int[r][c];
         int row                 = 0;
         int col                 = 0;
-        if((mat_row * mat_col) != (r * c)) return mat;
-        for (int i = 0; i < mat_row; i++) {
-            for (int j = 0; j < mat_col; j++) {
+        
+        
+        
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[0].length; j++) {
                 reshaped_matrix[row][col] = mat[i][j];
                 col++;
                 
