@@ -1,19 +1,26 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (!map.containsKey(nums[i])) {
-                map.put(nums[i], 1);
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int n : nums) {
+            if (!map.containsKey(n)) {
+                map.put(n, 1);
             } else {
-                map.put(nums[i], map.get(nums[i]) + 1);
+                map.put(n, map.get(n)+1);
             }
         }
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue()==1) {
-                return entry.getKey();
-            }
+            if (entry.getValue()==1) return entry.getKey();
         }
         return -1;
     }
 }
 
+// class Solution {
+//     public int singleNumber(int[] nums) {
+//         int n = 0;
+//         for (int num : nums) {
+//             n^=num;
+//         }
+//         return n;
+//     }
+// }
